@@ -17,7 +17,9 @@ namespace JocosAdvertisement.Controllers
         // GET: Cars
         public ActionResult Index()
         {
-            return View(db.Cars.ToList());
+	        ViewBag.miNombre = "Joseph";
+	        var listaOrdenada = db.Cars.ToList();
+	        return View(listaOrdenada);
         }
 
         // GET: Cars/Details/5
